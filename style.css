@@ -227,6 +227,9 @@ ul.firstUl li ul li a .icon-drop::before
   z-index: -10;
   transition: 0.5s;
 }
+ul.firstUl li ul li a .icon-drop::before{
+    border-radius: 50%;
+}
 .navigation ul.firstUl li.active a .icon::before {
   opacity: 0.5;
 }
