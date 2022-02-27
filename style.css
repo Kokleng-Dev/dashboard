@@ -264,9 +264,6 @@ transition: 0.4s;
 opacity: 0;
 visibility: hidden;
 }
-.navigation ul.firstUl li a .keyUp{
-  transition: opacity 1s;
-}
 .navigation ul.firstUl li.active a .text{
 text-shadow: 0 1px 10px var(--clr);
 color: var(--clr);
@@ -280,8 +277,19 @@ color: var(--clr);
   text-shadow: 0 1px 10px var(--clr);
 }
 .navigation ul.firstUl li a .keyUp{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
     position: absolute;
     right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation.open ul.firstUl li ul li a .keyUp{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 .navigation ul.firstUl li:hover a .keyUp{
   -ms-transform: rotate(20deg);
