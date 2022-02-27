@@ -4,9 +4,12 @@ const list = document.querySelectorAll('.list');
 const dropDown = document.querySelectorAll('.dropDown');
 const showDropDown = document.querySelectorAll('.show-drop-down');
 
+const content = document.querySelector('.content');
+
 
 menuToggle.onclick = function(){
     navigation.classList.toggle('open');
+    content.classList.toggle('open');
 }
 
 function activeLink(){
