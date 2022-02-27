@@ -417,79 +417,12 @@ ul.firstUl li ul li a {
   font-family: Poppins-Thin;
   width: 100%;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* media screen */
 
 @media only screen and (max-width: 768px) {
-  /* .navigation {
-    background-color: transparent;
-    border: none;
-    left: -250px;
-    top: 0;
-  }
-  .content {
-    width: 100%;
-    left: 0;
-  }
-  .content .menuToggle::before {
-    transform: translateY(8px);
-  }
-  .content .menuToggle::after {
-    transform: translateY(0px);
-    box-shadow: 0 -8px 0 #333;
-  }
-  .content.open .menuToggle::before {
-    transform: rotate(45deg);
-  }
-  .content.open .menuToggle::after {
-    transform: rotate(-45deg);
-    box-shadow: 0 0px 0 #333;
-  } */
-  /* content go right animation */
-  /* .navigation.open {
-    left: 0;
-    width: 53%;
-    border: none;
-  }
-  .navigation .company {
-    border: none;
-  }
-  .navigation.open .company .iconCompany{
-    height: 100px;
-  }
-  .navigation .company .companyName p {
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #fff;
-  }
-  .navigation ul.firstUl {
-    background-color: transparent;
-  }
-  .navigation.open ul.firstUl{
-    width: 100% !important;
-  }
-.navigation.open ul.firstUl li a .text,
-.navigation.open ul.firstUl li a .icon,
-.navigation.open ul.firstUl li ul li a .text-drop {
-  opacity: 1;
-  visibility: visible;
-  color: white;
-}
-.navigation.open ul.firstUl li:hover a .text,
-.navigation.open ul.firstUl li:hover a .icon
-{
-  text-shadow: var(--clr) !important;
-}
-  .content.open {
-    top: calc(35vh / 3);
-    left: 60%;
-  }
-  .content.open .middle {
-    max-height: 65vh;
-    height: 65vh;
-  }*/
   .navigation {
     background-color: transparent;
     border: none;
@@ -531,5 +464,50 @@ ul.firstUl li ul li a {
 .content.open .middle{
   height: 100vh;
   max-height: 100vh;
+}
+.content.open, .content.open .top, .content.open .menuToggle{
+  border-top-left-radius: 0px ;
+}
+.content.open, .content.open .middle{
+  border-bottom-left-radius: 0px;
+}
+.content, .top, .menuToggle{
+  border-top-left-radius: 15px ;
+}
+.content, .middle{
+  border-bottom-left-radius: 15px;
+}
+.content::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 71vh;
+  top: 30px;
+  left: -20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #fff;
+  opacity: 0.2;
+  z-index: -10;
+  transition: 0.2s;
+}
+.content::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 71vh;
+  top: 50px;
+  left: -40px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #fff;
+  opacity: 0.05;
+  z-index: -10;
+  transition: 0.2s;
+}
+.content.open::after,
+.content.open::before{
+  visibility: hidden;
+  opacity: 0;
 }
 } 
