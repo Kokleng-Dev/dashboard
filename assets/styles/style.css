@@ -430,7 +430,7 @@ ul.firstUl li ul li a {
   .content {
     top: calc(35vh / 3);
     width: 100%;
-    left: 60%;
+    left: 72%;
   }
   .content .middle {
     max-height: 65vh;
@@ -482,8 +482,8 @@ ul.firstUl li ul li a {
   position: absolute;
   width: 100%;
   height: 71vh;
-  top: 30px;
-  left: -20px;
+  top: 25px;
+  left: -17px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-color: #fff;
@@ -495,9 +495,9 @@ ul.firstUl li ul li a {
   content: '';
   position: absolute;
   width: 100%;
-  height: 71vh;
+  height: 70vh;
   top: 50px;
-  left: -40px;
+  left: -35px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-color: #fff;
@@ -511,3 +511,9 @@ ul.firstUl li ul li a {
   opacity: 0;
 }
 } 
+
+@media only screen and (max-width: 370px){
+  .content {
+    left: 79%;
+  }
+}
