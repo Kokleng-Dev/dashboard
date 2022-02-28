@@ -336,6 +336,7 @@ ul.firstUl li ul li a {
   position: absolute;
   top: 0px;
   left: 250px;
+  /* right: 0px; */
   background-color: antiquewhite;
   /* z-index: 100; */
   transition: 0.5s;
@@ -343,6 +344,7 @@ ul.firstUl li ul li a {
 .content.open {
   width: calc(100% - 75px);
   left: 75px;
+  /* right: 75px; */
 }
 .top {
   position: absolute;
@@ -423,6 +425,19 @@ ul.firstUl li ul li a {
 /* media screen */
 
 @media only screen and (max-width: 768px) {
+  .navigation ul.firstUl li a .icon,
+   ul.firstUl li ul li a .icon-drop{
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+     font-size: 1.2em;
+   }
+   .navigation ul.firstUl li.dropDown.activeDropDown ul li.show-drop-down.active a .icon-drop {
+    font-size: 1em;
+}
+ul.firstUl li ul li a .icon-drop {
+  font-size: 1em;
+}
   .navigation {
     background-color: transparent;
     border: none;
@@ -431,6 +446,7 @@ ul.firstUl li ul li a {
     top: calc(35vh / 3);
     width: 100%;
     left: 72%;
+    /* right: -72%; */
   }
   .content .middle {
     max-height: 65vh;
@@ -460,6 +476,7 @@ ul.firstUl li ul li a {
   width: 100%;
   top: 0;
   left: 0;
+  /* right: 0; */
 }
 .content.open .middle{
   height: 100vh;
@@ -511,9 +528,15 @@ ul.firstUl li ul li a {
   opacity: 0;
 }
 } 
-
-@media only screen and (max-width: 370px){
+@media only screen and (max-width: 413px){
+  .content {
+    left: 69%;
+    /* right: -68%; */
+  }
+}
+@media only screen and (max-width: 375px){
   .content {
     left: 79%;
+    /* right: -78%; */
   }
 }
