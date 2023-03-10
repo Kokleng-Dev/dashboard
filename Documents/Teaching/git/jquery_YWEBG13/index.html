@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        .transition{
+            transition: all 0.3s;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0">
+        <div id="sideBar" class="z-2 transition w-25 vh-100 position-fixed top-0 border-end" style="background-color: aliceblue;">
+            <div class="w-100 p-2">
+                <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg" alt="" class="rounded-circle img-thumbnail" width="70" height="70">
+                <span class="px-2">Side Bar</span>
+            </div>
+            <ul id="clickShow" class="p-0 m-0" style="list-style: none;">
+                <p  class="p-3 text-white bg-success m-0 border-bottom">Side Bar <span class="float-end">^^</span></p>
+                <div class="item-list">
+                    <li class="bg-primary p-3">Home <span class="float-end"> >> </span></li>
+                    <li class="bg-success p-3">Product <span class="float-end"> >> </span></li>
+                    <li class="bg-warning p-3">Setting <span class="float-end"> >> </span></li>
+                    <li class="bg-info p-3">Profile <span class="float-end"> >> </span></li>
+                </div>
+            </ul>
+            <ul id="clickShow" class="p-0 m-0 border-bottom top-0" style="list-style: none;">
+                <p class="p-3 text-white bg-success m-0">Side Bar 2 <span class="float-end">^^</span></p>
+                <div class="item-list">
+                    <li class="bg-primary p-3">Home <span class="float-end"> >> </span></li>
+                    <li class="bg-success p-3">Product <span class="float-end"> >> </span></li>
+                    <li class="bg-warning p-3">Setting <span class="float-end"> >> </span></li>
+                    <li class="bg-info p-3">Profile <span class="float-end"> >> </span></li>
+                </div>
+            </ul>
+        </div>
+        <div class="w-100 position-fixed top-0">
+            <div id="navBar" class="transition w-75 ms-auto border-bottom" style="background-color: aliceblue;">
+                <div class="row m-0">
+                    <div class="col-1 p-0">
+                        <button class="btn btn-dark px-3 py-2 rounded-0" att-btn="btn-menu">+</button>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+            <div id="content" class="transition w-75 ms-auto min-vh-100">
+                <div class="container">
+                    <h2 id="fadeId">Hello</h2>
+
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary" onclick="fadeInElement()">Click Fade In</button>
+                    <button class="btn btn-danger" onclick="fadeOutElement()">Click Fade Out</button>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>
+                        <ul class="hello" style="border: 1px solid blue; width: 200px;">
+                            <li>Hello</li>
+                            <li>hey</li>
+                        </ul>
+                    </p>
+                  
+                    <div id="showText" class="bg-primary" style="width: 700px;">
+                        hello
+                    </div>
+
+                    <button class="btn btn-outline-primary" id="btnAnimate">click animate</button>
+                    <!-- <button class="btn btn-danger" id="btnStopAnimate">Stop animate</button> -->
+
+                    <!-- <input type="text" id="showText" value="asjdkfkasjbf"> -->
+                    <button class="btn btn-success" id="btnText">click effect text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="animate" class="position-absolute z-0 rounded" style="min-width: 100vw; min-height: 100vh; display: none;">
+        <div class="card bg-dark text-white position-absolute w-75" style="top: 25%; left: 50%; transform: translate(-50%,-25%);">
+            <div class="card-header border-bottom border-white">
+                <h2>Create</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h2 id="selectHello">Hello</h2>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-danger" id="btnStopAnimate">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#btnText').click((e)=>{
+            // console.log($('#showText').css({fontSize : '2em', backgroundColor : '#0aa000', transition : 'all 0.5s'}));
+            console.log($('#showText').width(500));
+            // $('#showText').text('<span>Hello</span>')
+            // console.log($('#showText').html('<span>hello</span>'))
+
+            // console.log($('#showText').attr('value'));
+        })
+
+
+
+
+
+
+
+
+
+
+
+        $("#btnAnimate").click(function(){
+            // $("#animate").animate({
+            //     opacity: 1,
+            // }, 300, function() {
+            //     // Animation complete.
+            //     console.log('complete');
+            // });
+            if($('#animate').hasClass('z-0')){
+                $('#animate').removeClass('z-0');
+                $('#animate').addClass('z-3');
+            }
+            $("#animate").show(300);
+        })
+
+        $('#btnStopAnimate').click(()=>{
+            if($('#animate').hasClass('z-3')){
+                $('#animate').removeClass('z-3');
+                $('#animate').addClass('z-0');
+            }
+            $("#animate").hide(200);
+        })
+
+
+        $("#animate").click(function (event) {
+            if (event.target.id == 'animate') {
+                $("#animate").hide(200);
+            }
+            if($('#animate').hasClass('z-3')){
+                $('#animate').removeClass('z-3');
+                $('#animate').addClass('z-0');
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let lists = document.querySelectorAll('.item-list');
+        lists.forEach((list) => {
+            $(list).fadeOut(0);
+        })
+
+
+
+        function fadeInElement(){
+            $('#fadeId').fadeIn(200);
+        }
+
+        function fadeOutElement(){
+            $('#fadeId').fadeOut(200);
+        }
+
+
+
+        let clicks = document.querySelectorAll('#clickShow');
+        clicks.forEach(el => {
+            $(el).on('click', function(e){
+                // console.log($(el).text())
+                // console.log('yes');
+                // $(this).find('div.item-list').toggle(350);
+                // $(this).find('div.item-list').fadeTo(1000, 1);
+                $(this).find('div.item-list').slideToggle(1500);
+            })
+        });
+        // $('#btnStopAnimate').click(()=>{
+        //     // $(".item-list").stop();
+        //     $($(".item-list")[0]).stop();
+        // })
+        function hello(){
+            alert('heee');
+        }
+
+        $("button[att-btn=btn-menu]").on('click', function(e){
+            if($("#navBar").hasClass('w-75')){
+                $("#navBar").removeClass('w-75');
+                $("#navBar").addClass('w-100');
+                $("#content").removeClass('w-75');
+                $("#content").addClass('w-100');
+                $("#sideBar").css({'left':'-25%'});
+            } else {
+                $("#navBar").addClass('w-75');
+                $("#navBar").removeClass('w-100');
+                $("#content").addClass('w-75');
+                $("#content").removeClass('w-100');
+                $("#sideBar").css({'left':'0%'});
+            }
+        })
+    </script>
+</body>
+</html>
